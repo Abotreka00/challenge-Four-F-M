@@ -1,0 +1,170 @@
+/* start global */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+p {
+    font-size: 18px;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+:root {
+    --name-One: hsl(215, 51%, 70%);
+    --name-Two: hsl(178, 100%, 50%);
+    --name-Three: hsl(217, 54%, 11%);
+    --name-Four: hsl(216, 50%, 16%);
+    --name-Five: hsl(215, 32%, 27%);
+    --name-Six: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--name-Three);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+    width: 750px;
+    }
+}
+  /* Medium */
+@media (min-width: 992px) {
+    .container {
+    width: 970px;
+    }
+}
+  /* Large */
+@media (min-width: 1200px) {
+    .container {
+    width: 1170px;
+    }
+}
+/* end global */
+/* start box */
+.box {
+    width: 350px;
+    height: 530px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color:var(--name-Four) ;
+    box-shadow: 0 19px 25px hsl(216deg 48.72% 5.29%);
+    border-radius: 10px;
+    padding: 20px;
+}
+.box .image {
+    position: relative;
+    width: 310px;
+    height: 50%;
+    border-radius: 10px;
+
+}
+.box .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+.box .image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(178, 100%, 50%,60%);
+    border-radius: inherit;
+    opacity: 0;
+}
+.box .image .overlay img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.box .image .overlay:hover {
+    transition: .3s;
+    opacity: 1;
+}
+.box .info {
+    margin-top: 20px;
+}
+.box .info h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--name-Six);
+    opacity: .9;
+}
+.box .info h2:hover {
+    transition: .3s;
+    color: var(--name-Two);
+}
+.box .info p.p{
+    color: var(--name-Six);
+    opacity: .5;
+}
+.box .info .price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0 10px 0;
+}
+.box .info .price .eth{
+    color: var(--name-Two);
+}
+.box .info .price .eth img, 
+.box .info .price .time img{
+    width: 15px;
+    margin-right: 5px;
+}
+.box .info .price .time{
+    color: var(--name-One);
+}
+.box .info .footer{
+    display: flex;
+    align-items: center;
+    border-top: 2px solid var(--name-Five);
+    padding-top: 30px;
+}
+.box .info .footer img{
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--name-Six);
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.box .info .footer p {
+    color: var(--name-Six);
+    opacity: .7;
+}
+.box .info .footer p span.Creation1{
+    color: var(--name-One);
+}
+.box .info .footer p span.Creation2:hover{
+    transition: .3s;
+    color: var(--name-Two);
+}
+
+/* end box */
